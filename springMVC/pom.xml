@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.template</groupId>
+  <artifactId>springMVC</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>war</packaging>
+
+  <name>springMVC Maven Webapp</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-context</artifactId>
+          <version>4.2.4.RELEASE</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-core</artifactId>
+          <version>4.2.4.RELEASE</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-beans</artifactId>
+          <version>4.2.4.RELEASE</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-web</artifactId>
+          <version>4.2.4.RELEASE</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-webmvc</artifactId>
+          <version>4.2.4.RELEASE</version>
+      </dependency>
+
+
+
+      <!-- https://mvnrepository.com/artifact/org.apache.shiro/shiro-core -->
+      <dependency>
+          <groupId>org.apache.shiro</groupId>
+          <artifactId>shiro-core</artifactId>
+          <version>1.4.0</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.apache.shiro/shiro-web -->
+      <dependency>
+          <groupId>org.apache.shiro</groupId>
+          <artifactId>shiro-web</artifactId>
+          <version>1.4.0</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.apache.shiro/shiro-spring -->
+      <dependency>
+          <groupId>org.apache.shiro</groupId>
+          <artifactId>shiro-spring</artifactId>
+          <version>1.4.0</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.apache.shiro/shiro-ehcache -->
+      <dependency>
+          <groupId>org.apache.shiro</groupId>
+          <artifactId>shiro-ehcache</artifactId>
+          <version>1.4.0</version>
+      </dependency>
+
+
+
+      <dependency>
+          <groupId>com.fasterxml.jackson.core</groupId>
+          <artifactId>jackson-core</artifactId>
+          <version>2.6.5</version>
+      </dependency>
+
+
+
+  </dependencies>
+
+  <build>
+    <finalName>springMVC</finalName>
+          <plugins>
+              <plugin>
+                  <groupId>org.mortbay.jetty</groupId>
+                  <artifactId>jetty-maven-plugin</artifactId>
+                  <version>8.1.9.v20130131</version>
+                  <configuration>
+                      <webApp>
+                          <contextPath>/</contextPath>
+                      </webApp>
+                      <connectors>
+                          <connector implementation="org.eclipse.jetty.server.bio.SocketConnector">
+                              <port>8080</port>
+                              <maxIdleTime>60000</maxIdleTime>
+                          </connector>
+                      </connectors>
+                  </configuration>
+              </plugin>
+          </plugins>
+  </build>
+</project>
